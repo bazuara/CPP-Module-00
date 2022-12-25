@@ -3,6 +3,9 @@ NAME = megaphone
 # Source files
 SOURCE_FILES = megaphone.cpp
 
+# Objects
+OBJECT_FILES = $(SOURCE_FILES:.cpp=.o)
+
 # Flags and output
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
@@ -10,11 +13,12 @@ all: $(NAME)
 
 # Rule to build your object files and link them into a binary
 $(NAME):
+	@echo "🚧 Compiling... 🚧"
 	@g++ $(SOURCE_FILES) $(CFLAGS) -o $(NAME)
-
+	@echo "✅ Done!"
 # Rule to remove object files
 clean:
-	@rm -f *.o
+	@rm -f $(OBJECT_FILES)
 # Rule to remove binary, calls the 'clean' rule first
 fclean: clean
 	@rm -f $(NAME)
