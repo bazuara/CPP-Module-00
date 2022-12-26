@@ -1,10 +1,17 @@
 NAME = phonebook
 
 # Source files
-SOURCE_FILES = main.cpp
+SOURCE_FOLDER = src/
+SOURCE_FILES = main.cpp\
+			   contact.cpp
+SOURCES = $(addprefix $(SOURCE_FOLDER), $(SOURCE_FILES))
 
 # Objects
-OBJECT_FILES = $(SOURCE_FILES:.cpp=.o)
+OBJECTS= $(SOURCE_FILES:.cpp=.o)
+# OBJECTS = $(addprefix $(OBJECT_FOLDER), $(OBJECT_FILES))
+
+# Headers
+HEADERS_FOLDER	= incs/
 
 # Flags and output
 CFLAGS = -Wall -Wextra -Werror -std=c++98
@@ -12,13 +19,21 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 all: $(NAME)
 
 # Rule to build your object files and link them into a binary
-$(NAME):
-	@echo "🚧 Compiling... 🚧"
-	@g++ $(SOURCE_FILES) $(CFLAGS) -o $(NAME)
+$(NAME): $(OBJECTS)
+	@echo "🚧 Compiling binary... 🚧"
+	@g++ $(OBJECTS) -o $(NAME)
+	@echo "✅ Done!"
+
+#objects
+$(OBJECTS):
+	@echo "🚧 Compiling objects... 🚧"
+	@g++  -c $(SOURCES) $(CFLAGS) -I$(HEADERS_FOLDER)
 	@echo "✅ Done!"
 # Rule to remove object files
 clean:
-	@rm -f *.o
+	@echo "🧹 Deleting objects..."
+	@rm -f $(OBJECTS)
+	@echo "✅ Done!"
 # Rule to remove binary, calls the 'clean' rule first
 fclean: clean
 	@rm -f $(NAME)
