@@ -13,5 +13,21 @@
 #ifndef CONTACT_H
 #define CONTACT_H
 
-class Contact;
-#endif // !DEBUG
+class Contact {
+private:
+	int		index;
+	// char	*first_name;
+	// char 	*last_name;
+	// char 	*nick_name;
+	
+public:
+	// Contact();
+	void setIndex(int i)
+	{
+		index = i;
+	}
+	int getIndex(){
+		return(index);
+	}
+};
+#endif // !CONTACT_H

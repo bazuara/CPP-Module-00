@@ -10,12 +10,5 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <phonebook.hpp>
+#include <contact.hpp>
 
-class Contact
-{
-public:
-
-private:
-	
-};

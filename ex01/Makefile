@@ -3,7 +3,8 @@ NAME = phonebook
 # Source files
 SOURCE_FOLDER = src/
 SOURCE_FILES = main.cpp\
-			   contact.cpp
+			   contact.cpp\
+			   phonebook.cpp
 SOURCES = $(addprefix $(SOURCE_FOLDER), $(SOURCE_FILES))
 
 # Objects

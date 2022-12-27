@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <phonebook.hpp>
+#include <contact.hpp>
 
 void menu()
 {
@@ -34,10 +35,18 @@ void menu()
 	std::cout << "this is our menu with command "<< input << std::endl;
 }
 
+void test()
+{
+	Contact obj;
+	obj.setIndex(6);
+	printf("result %i", obj.getIndex());
+	
+}
+
 int main (int argc, char *argv[])
 {
 	(void)argc;
 	(void)argv;
-	menu();	
+	test();	
 	return 0;
 }
