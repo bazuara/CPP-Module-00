@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.cpp                                        :+:      :+:    :+:   */
+/*   phonebook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brunoazuara <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/26 20:34:31 by brunoazu          #+#    #+#             */
-/*   Updated: 2022/12/26 21:45:48 by brunoazu         ###   ########.fr       */
+/*   Created: 2022/12/26 21:44:45 by brunoazu          #+#    #+#             */
+/*   Updated: 2022/12/26 21:47:36 by brunoazu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <phonebook.hpp>
+#ifndef PHONEBOOK_HPP
+#include <cstring>
+#include <iostream>
 
-class Contact
-{
-public:
+#include <contact.hpp>
 
-private:
-	
-};
+class PhoneBook;
+#endif // !PHONEBOOK_HPP
+
+
+

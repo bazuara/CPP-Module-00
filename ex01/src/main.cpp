@@ -6,14 +6,11 @@
 /*   By: brunoazuara <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/25 20:06:51 by brunoazu          #+#    #+#             */
-/*   Updated: 2022/12/26 20:25:48 by brunoazu         ###   ########.fr       */
+/*   Updated: 2022/12/26 21:46:05 by brunoazu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <cstring>
-#include <iostream>
-
-
+#include <phonebook.hpp>
 
 void menu()
 {

@@ -6,11 +6,12 @@
 /*   By: brunoazuara <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 20:28:00 by brunoazu          #+#    #+#             */
-/*   Updated: 2022/12/26 20:34:01 by brunoazu         ###   ########.fr       */
+/*   Updated: 2022/12/26 21:43:23 by brunoazu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_H
 #define CONTACT_H
 
+class Contact;
 #endif // !DEBUG
