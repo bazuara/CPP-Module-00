@@ -6,7 +6,7 @@
 /*   By: brunoazuara <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/25 20:06:51 by brunoazu          #+#    #+#             */
-/*   Updated: 2022/12/26 21:46:05 by brunoazu         ###   ########.fr       */
+/*   Updated: 2022/12/28 14:41:38 by bazuara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,50 @@ void menu()
 	std::cout << "this is our menu with command "<< input << std::endl;
 }
 
+std::string shrinkStrWithDot(std::string str, unsigned long len)
+{
+	if (str.length() > len)
+		return (str.substr(0,9) += ".");
+	else
+		return (str);
+}
+
+void printContactInfo(Contact obj)
+{
+	std::cout << "|" 
+		<< "     " << obj.getIndex()<< "    "<<"|"
+		<< std::setw(10) << shrinkStrWithDot(obj.getFirstName(), 10) << "|"
+		<< std::setw(10) << shrinkStrWithDot(obj.getLastName(), 10) << "|"
+		<< std::setw(10) << shrinkStrWithDot(obj.getNickName(), 10) << "|"
+		<< std::endl;	
+}
+
+void printTableHeader()
+{
+	std::cout
+		<< "|----------|----------|----------|----------|" << std::endl
+		<< "|  Index   |   Name   | LastName |   Nick   |" << std::endl
+		<< "|----------|----------|----------|----------|" << std::endl;
+}
+
+void printTableFooter()
+{
+	std::cout
+		<< "|__________|__________|__________|__________|" << std::endl;
+
+
+}
+
 void test()
 {
 	Contact obj;
 	obj.setIndex(6);
-	printf("result %i", obj.getIndex());
-	
+	obj.setFirstName("Pepe");
+	obj.setLastName("Perez");
+	obj.setNickName("Nick");
+	printTableHeader();
+	printContactInfo(obj);
+	printTableFooter();
 }
 
 int main (int argc, char *argv[])
