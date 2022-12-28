@@ -6,14 +6,13 @@
 /*   By: brunoazuara <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/25 20:06:51 by brunoazu          #+#    #+#             */
-/*   Updated: 2022/12/28 14:41:38 by bazuara          ###   ########.fr       */
+/*   Updated: 2022/12/28 16:00:33 by bazuara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <phonebook.hpp>
-#include <contact.hpp>
 
-void menu()
+void menu(PhoneBook *phone)
 {
 	std::string input;
 
@@ -21,7 +20,8 @@ void menu()
 	{
 		std::cin >> input;
 		if (input.compare("ADD") == 0)
-			std::cout << "RESULT OF COMMAND ADD" << std::endl;
+			phone->addContact();
+			// std::cout << "RESULT OF COMMAND ADD" << std::endl;
 		else if (input.compare("SEARCH") == 0)
 			std::cout << "RESULT OF COMMAND SEARCH" << std::endl;
 		else if (input.compare("EXIT") == 0)
@@ -83,8 +83,9 @@ void test()
 
 int main (int argc, char *argv[])
 {
+	PhoneBook pb;
 	(void)argc;
 	(void)argv;
-	test();	
+	menu(&pb);
 	return 0;
 }
