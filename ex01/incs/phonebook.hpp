@@ -6,7 +6,7 @@
 /*   By: brunoazuara <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 21:44:45 by brunoazu          #+#    #+#             */
-/*   Updated: 2022/12/28 16:02:14 by bazuara          ###   ########.fr       */
+/*   Updated: 2023/01/04 11:18:32 by brunoazu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class PhoneBook
 		Contact phone_book[8];
 	public:
 		void 	addContact();
+		void	searchContact();
 		PhoneBook();
 };
 
