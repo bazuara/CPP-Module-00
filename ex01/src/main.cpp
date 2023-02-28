@@ -6,7 +6,7 @@
 /*   By: brunoazuara <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/25 20:06:51 by brunoazu          #+#    #+#             */
-/*   Updated: 2023/02/28 11:10:24 by bazuara          ###   ########.fr       */
+/*   Updated: 2023/02/28 12:50:02 by bazuara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,24 +34,11 @@ void menu(PhoneBook *phone)
 	}
 }
 
-void test()
-{
-	Contact obj;
-	obj.setIndex(6);
-	obj.setFirstName("Pepe");
-	obj.setLastName("Perezzzz zzzzzzzzz");
-	obj.setNickName("Nick");
-	obj.printContactInfo();
-	obj.printContactInfo();
-	obj.printContactInfo();
-}
-
 int main (int argc, char *argv[])
 {
 	PhoneBook pb;
 	(void)argc;
 	(void)argv;
 	menu(&pb);
-	// test();
 	return 0;
 }
