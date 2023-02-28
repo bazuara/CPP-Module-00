@@ -6,7 +6,7 @@
 /*   By: brunoazuara <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 20:28:00 by brunoazu          #+#    #+#             */
-/*   Updated: 2023/01/04 11:48:50 by brunoazu         ###   ########.fr       */
+/*   Updated: 2023/02/28 11:09:46 by bazuara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,6 @@ public:
 	void setDarkestSecret(std::string secret);
 	std::string getDarkestSecret() const;
 
-	void printTableHeaderShort();
-	void printTableFooterShort();
 	void printContactInfo();
 };
 #endif // !CONTACT_H

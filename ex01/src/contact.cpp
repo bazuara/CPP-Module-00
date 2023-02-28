@@ -6,7 +6,7 @@
 /*   By: brunoazuara <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 20:34:31 by brunoazu          #+#    #+#             */
-/*   Updated: 2023/01/04 11:48:06 by brunoazu         ###   ########.fr       */
+/*   Updated: 2023/02/28 11:06:26 by bazuara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,19 +64,6 @@ std::string Contact::getDarkestSecret() const{
 }
 
 
-void Contact::printTableHeaderShort()
-{
-	std::cout
-		<< "|----------|----------|----------|----------|" << std::endl
-		<< "|  Index   |   Name   | LastName |   Nick   |" << std::endl
-		<< "|----------|----------|----------|----------|" << std::endl;
-}
-
-void Contact::printTableFooterShort()
-{
-	std::cout
-		<< "|__________|__________|__________|__________|" << std::endl;
-}
 
 
 std::string shrinkStrWithDot(std::string str, unsigned long len)

@@ -6,7 +6,7 @@
 /*   By: brunoazuara <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 21:48:16 by brunoazu          #+#    #+#             */
-/*   Updated: 2023/01/04 12:01:17 by brunoazu         ###   ########.fr       */
+/*   Updated: 2023/02/28 11:09:10 by bazuara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,24 @@ void	PhoneBook::addContact()
 	std::cout << "From inside the object: This should add a contact" << std::endl;
 }
 
+void	PhoneBook::printTableHeaderShort()
+{
+	std::cout
+		<< "|----------|----------|----------|----------|" << std::endl
+		<< "|  Index   |   Name   | LastName |   Nick   |" << std::endl
+		<< "|----------|----------|----------|----------|" << std::endl;
+}
+
+void 	PhoneBook::printTableFooterShort()
+{
+	std::cout
+		<< "|__________|__________|__________|__________|" << std::endl;
+}
 
 void	PhoneBook::searchContact()
 {
-	std::cout << "From inside the object: This should search for a contact" << std::endl;
+	// std::cout << "From inside the object: This should search for a contact" << std::endl;
+	PhoneBook::printTableHeaderShort();
+	PhoneBook::printTableFooterShort();
 }
+

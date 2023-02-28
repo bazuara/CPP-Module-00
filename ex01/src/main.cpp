@@ -6,7 +6,7 @@
 /*   By: brunoazuara <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/25 20:06:51 by brunoazu          #+#    #+#             */
-/*   Updated: 2023/01/04 12:00:54 by brunoazu         ###   ########.fr       */
+/*   Updated: 2023/02/28 11:10:24 by bazuara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,9 @@ void test()
 	obj.setFirstName("Pepe");
 	obj.setLastName("Perezzzz zzzzzzzzz");
 	obj.setNickName("Nick");
-	obj.printTableHeaderShort();
 	obj.printContactInfo();
 	obj.printContactInfo();
 	obj.printContactInfo();
-	obj.printTableFooterShort();
 }
 
 int main (int argc, char *argv[])
