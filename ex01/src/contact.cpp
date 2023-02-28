@@ -6,7 +6,7 @@
 /*   By: brunoazuara <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 20:34:31 by brunoazu          #+#    #+#             */
-/*   Updated: 2023/02/28 12:18:07 by bazuara          ###   ########.fr       */
+/*   Updated: 2023/02/28 13:04:32 by bazuara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ std::string Contact::getNickName() const{
 	return(nick_name);
 }
 
-
 void Contact::setPhoneNumber(std::string number)
 {
 	phone_number = number;
@@ -81,6 +80,15 @@ void Contact::printContactInfo()
 		<< std::setw(10) << shrinkStrWithDot(this->getLastName(), 10) << "|"
 		<< std::setw(10) << shrinkStrWithDot(this->getNickName(), 10) << "|"
 		<< std::endl;	
+}
+
+void Contact::printContactFullInfo()
+{
+	std::cout << "Name: " << this->getFirstName() << std::endl;
+	std::cout << "Last Name: " << this->getLastName() << std::endl;
+	std::cout << "Nickname: " << this->getNickName() << std::endl;
+	std::cout << "Phone: " << this->getPhoneNumber() << std::endl;
+	std::cout << "Darkest secret: " << this->getDarkestSecret() << std::endl;
 }
 
 

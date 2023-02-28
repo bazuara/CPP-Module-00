@@ -6,7 +6,7 @@
 /*   By: brunoazuara <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 21:48:16 by brunoazu          #+#    #+#             */
-/*   Updated: 2023/02/28 12:45:42 by bazuara          ###   ########.fr       */
+/*   Updated: 2023/02/28 13:01:07 by bazuara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ void	PhoneBook::addContact()
 	std::string name;
 	std::string lastname;
 	std::string nick;
+	std::string phone;
+	std::string secret;
 
 	std::cout << "Please, input the contact Name" << std::endl;
 	std::cin >> name;
@@ -45,6 +47,14 @@ void	PhoneBook::addContact()
 	std::cout << "Please, input the contact Nick" << std::endl;
 	std::cin >> nick;
 	this->phone_book[this->ocupied % 8].setNickName(nick);
+
+	std::cout << "Please, input the contact's phone number" << std::endl;
+	std::cin >> phone;
+	this->phone_book[this->ocupied % 8].setPhoneNumber(phone);
+
+	std::cout << "Please, input the contact's darkest secret" << std::endl;
+	std::cin >> secret;
+	this->phone_book[this->ocupied % 8].setDarkestSecret(secret);
 
 	this->phone_book[this->ocupied % 8].setIndex(this->ocupied % 8);
 	
@@ -72,7 +82,6 @@ void	PhoneBook::searchContact()
 	int i = 0;
 	int input;
 
-	// std::cout << "From inside the object: This should search for a contact" << std::endl;
 	PhoneBook::printTableHeaderShort();
 	while (i < this->ocupied && i < 8)
 	{
@@ -91,11 +100,7 @@ void	PhoneBook::searchContact()
 		else
 		{
 			if (this->phone_book[input].getFirstName() != "")
-			{
-				this->printTableHeaderShort();
-				this->phone_book[input].printContactInfo();
-				this->printTableFooterShort();
-			}
+				this->phone_book[input].printContactFullInfo();
 			else
 				std::cout << "Sorry, empty entry" << std::endl;
 			break;
