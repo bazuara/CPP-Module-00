@@ -6,12 +6,11 @@
 /*   By: brunoazuara <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 20:34:31 by brunoazu          #+#    #+#             */
-/*   Updated: 2023/02/28 11:06:26 by bazuara          ###   ########.fr       */
+/*   Updated: 2023/02/28 12:18:07 by bazuara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <contact.hpp>
-
 
 void Contact::setIndex(int i)
 {
