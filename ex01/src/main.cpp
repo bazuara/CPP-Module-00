@@ -6,7 +6,7 @@
 /*   By: brunoazuara <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/25 20:06:51 by brunoazu          #+#    #+#             */
-/*   Updated: 2023/02/28 12:50:02 by bazuara          ###   ########.fr       */
+/*   Updated: 2023/02/28 13:15:45 by bazuara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,9 @@ void menu(PhoneBook *phone)
 	}
 }
 
-int main (int argc, char *argv[])
+int main ()
 {
 	PhoneBook pb;
-	(void)argc;
-	(void)argv;
 	menu(&pb);
 	return 0;
 }
