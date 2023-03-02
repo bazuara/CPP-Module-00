@@ -6,7 +6,7 @@
 /*   By: brunoazuara <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 21:48:16 by brunoazu          #+#    #+#             */
-/*   Updated: 2023/02/28 13:01:07 by bazuara          ###   ########.fr       */
+/*   Updated: 2023/03/02 13:47:03 by bazuara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,22 +38,32 @@ void	PhoneBook::addContact()
 
 	std::cout << "Please, input the contact Name" << std::endl;
 	std::cin >> name;
+	std::cin.clear();
+	std::cin.ignore(INT_MAX, '\n');
 	this->phone_book[this->ocupied % 8].setFirstName(name);
 
 	std::cout << "Please, input the contact Last Name" << std::endl;
 	std::cin >> lastname;
+	std::cin.clear();
+	std::cin.ignore(INT_MAX, '\n');
 	this->phone_book[this->ocupied % 8].setLastName(lastname);
 	
 	std::cout << "Please, input the contact Nick" << std::endl;
 	std::cin >> nick;
+	std::cin.clear();
+	std::cin.ignore(INT_MAX, '\n');
 	this->phone_book[this->ocupied % 8].setNickName(nick);
 
 	std::cout << "Please, input the contact's phone number" << std::endl;
 	std::cin >> phone;
+	std::cin.clear();
+	std::cin.ignore(INT_MAX, '\n');
 	this->phone_book[this->ocupied % 8].setPhoneNumber(phone);
 
 	std::cout << "Please, input the contact's darkest secret" << std::endl;
 	std::cin >> secret;
+	std::cin.clear();
+	std::cin.ignore(INT_MAX, '\n');
 	this->phone_book[this->ocupied % 8].setDarkestSecret(secret);
 
 	this->phone_book[this->ocupied % 8].setIndex(this->ocupied % 8);
