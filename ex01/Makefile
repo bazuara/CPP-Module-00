@@ -15,7 +15,7 @@ OBJECTS= $(SOURCE_FILES:.cpp=.o)
 HEADERS_FOLDER	= incs/
 
 # Flags and output
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -Wno-c++0x-compat -std=c++98
 
 all: $(NAME)
 
@@ -28,7 +28,7 @@ $(NAME): $(OBJECTS)
 #objects
 $(OBJECTS):
 	@echo "🚧 Compiling objects... 🚧"
-	@g++  -c $(SOURCES) $(CFLAGS) -I$(HEADERS_FOLDER)
+	@g++  -c $(SOURCES) $(CXXCFLAGS) -I$(HEADERS_FOLDER)
 	@echo "✅ Done!"
 # Rule to remove object files
 clean:
