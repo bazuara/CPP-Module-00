@@ -6,19 +6,15 @@
 /*   By: brunoazuara <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 00:45:53 by brunoazu          #+#    #+#             */
-/*   Updated: 2023/03/01 11:41:45 by bazuara          ###   ########.fr       */
+/*   Updated: 2023/03/02 15:50:10 by brunoazu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <cstdio>
-#include <cstring>
 #include <iostream>
 #include <string>
 
-// meter en un propio namespace 
 namespace 
 {
-	
 void printUpper (const std::string &str)
 {
 	int i = 0;
@@ -42,7 +38,6 @@ int main (int argc, char *argv[])
 			i++;
 		}
 	}
-	// mejor con nn para no vaciar el buffer (no lo tengo muy claro)
 	std::cout << std::endl;
 	return 0;
 }
