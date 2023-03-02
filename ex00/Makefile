@@ -33,6 +33,6 @@ normi:
 
 # Rule to debug, include norminette and similars
 test: re
-	./$(NAME) hello this is a test
+	./$(NAME) "shhhhh... I think the students are asleep..."
 	./$(NAME) Damnit " ! " "Sorry students, I thought this thing was off."
 	./$(NAME)
