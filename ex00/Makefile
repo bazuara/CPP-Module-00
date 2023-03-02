@@ -7,7 +7,7 @@ SOURCE_FILES = megaphone.cpp
 OBJECT_FILES = $(SOURCE_FILES:.cpp=.o)
 
 # Flags and output
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -Wno-c++0x-compat -std=c++98
 
 all: $(NAME)
 
